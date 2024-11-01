@@ -1,0 +1,407 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="description" content="A brief description of your project" />
+    <meta name="keywords" content="your, keywords, here" />
+    <meta name="author" content="Your Name" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Scripts -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="/js/onboarding/signup.js"></script>
+
+    <title>Sign up to LiftTrack</title>
+
+    <!-- Styles -->
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="/styles/global.css" />
+    <link rel="stylesheet" href="/styles/components/signup.css" />
+
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/icons/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/icons/favicon-16x16.png"
+    />
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://yoursite.com/" />
+    <meta property="og:title" content="My Tailwind Project" />
+    <meta
+      property="og:description"
+      content="A brief description of your project"
+    />
+    <meta
+      property="og:image"
+      content="https://yoursite.com/images/og-image.jpg"
+    />
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://yoursite.com/" />
+    <meta property="twitter:title" content="My Tailwind Project" />
+    <meta
+      property="twitter:description"
+      content="A brief description of your project"
+    />
+    <meta
+      property="twitter:image"
+      content="https://yoursite.com/images/twitter-image.jpg"
+    />
+  </head>
+  <body class="relative">
+    <!-- public/pages/onboarding/signup.html -->
+
+    <!-- HEADER | HEADING | NAVIGATION -->
+    <header class="w-screen h-auto shadow-md fixed top-0 left-0 z-10">
+      <nav class="w-full flex flex-row items-center justify-between">
+        <h1 id="signup-heading" class="h1">Sign up</h1>
+        <button class="close-btn" aria-label="Close sign up form"></button>
+      </nav>
+    </header>
+
+    <!-- MAIN | GOOGLE / APPLE LOGIN | SIGN UP FORM -->
+    <main class="mt-[54px]">
+      <!-- GOOGLE / APPLE LOGIN -->
+
+      <section id="social-login-section" class="w-full py-6">
+        <div class="wrapper">
+          <!-- GOOGLE -->
+          <button
+            id="google-login"
+            class="social-login btn-white flex flex-row items-center justify-center gap-2 hover:shadow-sm transition-all duration-75 hover:border-2"
+            type="button"
+          >
+            <img
+              src="/src/assets/icons/google.svg"
+              alt="Google logo"
+              class="h-6 w-6"
+              aria-hidden="true"
+            />
+            Sign up with Google
+          </button>
+
+          <!-- APPLE -->
+          <button
+            type="button"
+            id="apple-login"
+            class="social-login btn-white flex flex-row items-center justify-center gap-2 hover:shadow-sm transition-all duration-75 hover:border-2"
+          >
+            <img
+              src="/src/assets/icons/apple-black.svg"
+              alt="Apple logo"
+              class="h-6 w-6"
+              aria-hidden="true"
+            />
+            Sign up with Apple
+          </button>
+        </div>
+      </section>
+
+      <!-- SIGN UP FORM -->
+      <section id="sign-up-section" class="w-full">
+        <!-- EMAIL SIGN UP PROMT -->
+        <h2 class="h2">Or sign up with your email</h2>
+
+        <h3 class="h3 mt-6">Let's get to know you better</h3>
+
+        <!-- EMAIL SIGN UP FORM -->
+        <form
+          id="signup-form"
+          class="mt-3 flex flex-col items-start"
+          novalidate
+        >
+          <!-- PERSONAL INFORMATION -->
+          <fieldset>
+            <legend class="sr-only">Personal Information</legend>
+
+            <!-- NAME INPUT GROUP -->
+            <div class="input-group">
+              <label for="name">What's your name?</label>
+              <input
+                class="input"
+                name="name"
+                type="text"
+                id="name"
+                minlength="2"
+                autocomplete="name"
+                placeholder="Your name"
+                required
+                aria-describedby="name-error"
+              />
+
+              <!-- NAME INPUT ERROR -->
+              <div
+                id="name-error"
+                class="error-message hidden"
+                data-error="name"
+                role="alert"
+              >
+                Please enter your name
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend class="sr-only">Email address</legend>
+
+            <!-- EMAIL INPUT GROUP -->
+            <div class="input-group">
+              <label for="email">And your email address?</label>
+              <input
+                class="input"
+                name="email"
+                type="email"
+                id="email"
+                minlength="2"
+                autocomplete="email"
+                placeholder="Your email"
+                required
+                aria-describedby="email-error"
+              />
+
+              <!-- EMAIL INPUT ERROR -->
+              <div
+                id="email-error"
+                class="error-message hidden"
+                data-error="email"
+                role="alert"
+              >
+                Please enter a valid email
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend class="sr-only">Date of birth</legend>
+
+            <!-- DOB INPUT GROUP -->
+            <div class="input-group">
+              <label for="dob">When were you born?</label>
+              <input
+                class="input"
+                name="dob"
+                type="date"
+                id="dob"
+                minlength="2"
+                autocomplete="bday"
+                required
+                aria-describedby="dob-error"
+              />
+
+              <!-- DOB INPUT ERROR -->
+              <div
+                id="dob-error"
+                class="error-message hidden"
+                data-error="dob"
+                role="alert"
+              >
+                Please enter you date of birth
+              </div>
+            </div>
+          </fieldset>
+
+          <!-- PASSWORD -->
+          <fieldset class="relative">
+            <legend class="sr-only">Password</legend>
+
+            <!-- PASSWORD INPUT GROUP -->
+            <div class="input-group">
+              <label for="password"
+                >Let's keep you secure, create a password</label
+              >
+              <input
+                class="input"
+                name="password"
+                type="password"
+                id="password"
+                minlength="8"
+                autocomplete="new-password"
+                required
+                aria-describedby="password-error password-requirements"
+              />
+
+              <!-- PASSWORD REQUIREMENTS -->
+              <ul id="password-requirements" class="text-sm">
+                <li>
+                  Passwords must be a
+                  <span class="font-semibold" data-requirement="length"
+                    >minimum of 8 characters</span
+                  >
+                </li>
+                <li>
+                  Passwords must contain a combination of
+                  <ul>
+                    <li>
+                      <span class="font-semibold" data-requirement="uppercase"
+                        >uppercase</span
+                      >
+                      and
+                      <span class="font-semibold" data-requirement="lowercase"
+                        >lowercase</span
+                      >,
+                      <span class="font-semibold" data-requirement="number"
+                        >numeric</span
+                      >
+                      and
+                      <span class="font-semibold" data-requirement="special"
+                        >special characters</span
+                      >
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+
+              <!-- PASSWORD INPUT ERROR -->
+              <div
+                id="password-error"
+                class="error-message hidden"
+                data-error="password"
+                role="alert"
+              >
+                Please create a password
+              </div>
+            </div>
+
+            <!-- HIDE / SHOW PASSWORD -->
+            <!-- SHOW PASSWORD -->
+            <button
+              type="button"
+              class="eye-icon absolute top-[3.4rem] right-3 cursor-pointer"
+              aria-label="Show password"
+              id="show-password"
+            >
+              <img
+                src="/src/assets/icons/eye-black.svg"
+                alt="Show password"
+                aria-hidden="true"
+              />
+            </button>
+
+            <!-- HIDE PASSWORD -->
+            <button
+              type="button"
+              class="eye-icon absolute top-[3.1rem] right-3 cursor-pointer hidden"
+              aria-label="Hide password"
+              id="hide-password"
+            >
+              <img
+                src="/src/assets/icons/eye-hide-black.svg"
+                alt="Hide password"
+                aria-hidden="true"
+              />
+            </button>
+
+            <!-- PASSWORD CONFIRM INPUT GROUP -->
+            <div class="input-group">
+              <label for="password-confirm">Confirm password</label>
+              <input
+                class="input"
+                name="password-confirm"
+                type="password"
+                id="password-confirm"
+                minlength="8"
+                autocomplete="new-password"
+                required
+                aria-describedby="password-confirm-error"
+              />
+
+              <!-- PASSWORD CONFIRM INPUT ERROR -->
+              <div
+                id="password-confirm-error"
+                class="error-message hidden"
+                data-error="password-confirm"
+                role="alert"
+              >
+                Passwords do not match
+              </div>
+            </div>
+          </fieldset>
+
+          <!-- TERMS AND PRIVACY CHECKBOX -->
+          <fieldset class="mt-4">
+            <legend class="sr-only">Terms and conditions</legend>
+
+            <!-- TERMS AND CONDITIONS INPUT GROUP -->
+            <div class="input-group">
+              <div class="wrapper flex flex-row items-center gap-3">
+                <input
+                  class="checkbox"
+                  name="checkbox"
+                  type="checkbox"
+                  id="terms"
+                  name="terms"
+                  required
+                  aria-describedby="terms-error"
+                />
+                <label for="terms">
+                  I agree to the <a href="#">Terms</a> and
+                  <a href="#">Privacy Policy</a>
+                </label>
+              </div>
+              <!-- TERMS CHECKBOX ERROR -->
+              <div
+                id="terms-error"
+                class="error-message hidden"
+                data-error="terms"
+                role="alert"
+              >
+                Please read and acknowledge terms and privacy policy
+              </div>
+            </div>
+          </fieldset>
+
+          <!-- FORM LEVEL ERROR -->
+          <!-- FORM ERROR -->
+          <div
+            id="form-error"
+            class="error-message hidden"
+            data-error="form"
+            aria-live="polite"
+            role="alert"
+          >
+            Something went wrong, please try again.
+            <br />
+            If the problem persists, please contact
+            <a
+              href="mailto:support@lifttrack.com"
+              class="flex flex-row items-center gap-2 max-w-min group"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              support
+              <img
+                src="/src/assets/icons/Right.svg"
+                alt="Right icon"
+                class="group-hover:translate-x-1 transition-all duration-75 ease-linear"
+              />
+            </a>
+          </div>
+
+          <!-- Submit Button -->
+          <button class="btn" type="submit" id="signup-button">
+            <span>Create account</span>
+            <!-- LOADING SPINNER -->
+            <span class="loading-spinner hidden" aria-hidden="true"></span>
+          </button>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>
