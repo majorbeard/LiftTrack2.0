@@ -67,7 +67,7 @@ header {
 /* ICONS */
 /* CLOSE / EXIT BUTTON */
 .close-btn {
-    background-image: url("/src/assets/icons/close.svg");
+    background-image: url("close.svg");
     width: 1rem;
     height: 1rem;
     background-color: transparent;
