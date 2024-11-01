@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="/js/index.js" async defer></script>
+    <link rel="stylesheet" href="/css/global.css">
+
+    <!-- Canonical Tag -->
+    <link rel="canonical" href="https://yourdomain.com" />
+
+    <!-- Open Graph Tags (for social media sharing) -->
+    <meta property="og:title" content="Weight Lifting Tracker | Track Your Progress, Nutrition, and Sleep" />
+    <meta property="og:description" content="Track your weight lifting progress, monitor your nutrition, and optimize your sleep with our comprehensive tracking site. Join now to achieve your fitness goals!" />
+    <meta property="og:image" content="https://yourdomain.com/image.jpg" />
+    <meta property="og:url" content="https://yourdomain.com" />
+    <meta property="og:type" content="website" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Weight Lifting Tracker | Track Your Progress, Nutrition, and Sleep" />
+    <meta name="twitter:description" content="Track your weight lifting progress, monitor your nutrition, and optimize your sleep with our comprehensive tracking site. Join now to achieve your fitness goals!" />
+    <meta name="twitter:image" content="https://yourdomain.com/image.jpg" />
+
+    <!-- Meta Robots -->
+    <meta name="robots" content="index, follow" />
+
+    <!-- Meta Keywords -->
+    <meta name="keywords" content="weight lifting tracker, fitness tracking, nutrition tracking, sleep tracker, progressive overload, fitness goals, muscle gain, food vendors, pre-made meals" />
+
+    <meta name="description" content="Track your weight lifting progress, monitor your nutrition, and optimize your sleep with our comprehensive tracking site. Join now to achieve your fitness goals!" />
+
+    <title>LiftTrack - Your Ultimate Workout Companion</title>
+</head>
+
+<body class="relative">
+    <header class="w-screen h-auto px-2 py-5 relative">
+        <nav id="nav" class="w-full h-auto flex flex-row items-center justify-between relative z-10">
+
+            <!-- LOGO -->
+            <a href="index.html"><img id="logo" src="/images/LiftTrack_Logo.svg" alt="logo" class="w-40 h-auto"></a>
+
+            <!-- NAVBAR MENU -->
+            <ul id="navbar-menu" style="background-color: var(--main-color);" class="w-screen h-screen text-white p-2 flex flex-col items-start gap-2 fixed top-0 left-0 z-10 subheading scale-x-0 origin-left transition-all duration-200 ease-in-out">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="signup.html">Sign up</a></li>
+
+                <!-- CLOSE MENU BUTTON -->
+                <li>
+                    <button id="close-nav-menu" class="text-5xl absolute top-0 right-2">
+                        &times;
+                    </button>
+            </ul>
+
+            <!-- NAVBAR BUTTON -->
+            <button id="hamburger" class="w-9 h-6 flex flex-col justify-between items-center">
+                <div id="hamburger-line-1" class="hamburger-line w-full h-1 rounded-full bg-white"></div>
+                <div id="hamburger-line-2" class="hamburger-line w-full h-1 rounded-full bg-white"></div>
+                <div id="hamburger-line-3" class="hamburger-line w-full h-1 rounded-full bg-white"></div>
+            </button>
+        </nav>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main id="main" style="background-image: url(/images/weights_on_floor_BW.jpg); background-size: cover" class="w-screen h-screen absolute top-0 left-0 p-2 z-[1]">
+        
+        <!-- MAIN CONTENT | CTA -->
+        <div class="wrapper text-white flex flex-col items-start justify-center gap-5 h-full w-full">
+            <h1 class="text-3xl font-extrabold italic">Welcome to Lift Track</h1>
+
+            <!-- MAIN CONTENT | INTRO -->
+            <p>Your ultimate companion for tracking <a href="/indexPages/workout.html" style="color: var(--main-color)" class="hover:underline">workouts</a>, <a href="/indexPages/nutrition.html" style="color: var(--main-color)" class="hover:underline">nutrition</a>, <a href="/indexPages/sleep.html" class="hover:underline">sleep</a>, and <a href="/indexPages/progress.html" style="color: var(--main-color)" class="hover:underline">progress</a></p>
+            <p>With Lift Track we do the thinking for you, so you can build the life you want.</p>
+
+            <!-- CTA -->
+            <a href="/indexPages/signup.html"><button style="background-color: var(--main-color);" class="hover:cursor-pointer text-white font-bold p-2 rounded-sm -skew-x-6">Get started</button></a>
+        </div>
+    </main>
+</body>
+</html>

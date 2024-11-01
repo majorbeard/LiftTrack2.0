@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/styles/global.css">
+    <link rel="stylesheet" href="/styles/components/email-verify.css">
+
+    <!-- JS -->
+    <script src="/js/pages/auth/email-verify.js" async defer></script>
+
+    <!-- Canonical Tag -->
+    <link rel="canonical" href="https://yourdomain.com" />
+
+    <!-- Open Graph Tags (for social media sharing) -->
+    <meta property="og:title" content="Weight Lifting Tracker | Track Your Progress, Nutrition, and Sleep" />
+    <meta property="og:description" content="Track your weight lifting progress, monitor your nutrition, and optimize your sleep with our comprehensive tracking site. Join now to achieve your fitness goals!" />
+    <meta property="og:image" content="https://yourdomain.com/image.jpg" />
+    <meta property="og:url" content="https://yourdomain.com" />
+    <meta property="og:type" content="website" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Weight Lifting Tracker | Track Your Progress, Nutrition, and Sleep" />
+    <meta name="twitter:description" content="Track your weight lifting progress, monitor your nutrition, and optimize your sleep with our comprehensive tracking site. Join now to achieve your fitness goals!" />
+    <meta name="twitter:image" content="https://yourdomain.com/image.jpg" />
+
+    <!-- Meta Robots -->
+    <meta name="robots" content="index, follow" />
+
+    <!-- Meta Keywords -->
+    <meta name="keywords" content="weight lifting tracker, fitness tracking, nutrition tracking, sleep tracker, progressive overload, fitness goals, muscle gain, food vendors, pre-made meals" />
+
+    <meta name="description" content="Track your weight lifting progress, monitor your nutrition, and optimize your sleep with our comprehensive tracking site. Join now to achieve your fitness goals!" />
+
+    <title>LiftTrack - Your Ultimate Workout Companion</title>
+</head>
+
+<body class="relative">
+
+    <!-- header content -->
+    <header class="w-screen h-auto px-3 py-6 shadow-md bg-white
+            fixed top-0 left-0 z-50">
+
+        <nav 
+            class="header-container flex flex-row items-center justify-between">
+            <h1 class="h1">Email verification</h1>
+
+            <!-- Close Button -->
+            <div class="close-btn"></div>
+        </nav>        
+    </header>
+
+    <!-- Main Content -->
+    <main class="mt-[84px] py-2 px-3">
+
+        <div class="verification-container
+            flex flex-col items-start gap-3">
+            <h2 class="h2">Just a quick verification</h2>
+
+            <p>Please enter the OTP that was sent to</p>
+
+            <p><span id="email">duplessis.werner@hotmail.com</span></p>
+        </div>
+
+        <!-- OTP INPUT -->
+        <div class="otp-container 
+                    my-6 w-100">
+            <form
+                id="otp-form"
+                class="w-full flex flex-col items-center gap-3"
+                novalidate
+            >
+                <fieldset
+                    class="otp-fieldset flex flex-row items-center justify-center gap-3"
+                >
+                    <legend class="sr-only">OTP</legend>
+
+                    <!-- OTP Inputs -->
+                    <input 
+                        class="otp-input"
+                        type="number"
+                        id="otp1"
+                        name="otp1"
+                        aria-label="OTP"
+                        autofocus
+                        required
+                        maxlength="1"
+                    >
+
+                    <input 
+                        class="otp-input"
+                        type="number"
+                        id="otp2"
+                        name="otp2"
+                        aria-label="OTP"
+                        autofocus
+                        required
+                        maxlength="1"
+                    >
+
+                    <input 
+                        class="otp-input"
+                        type="number"
+                        id="otp3"
+                        name="otp3"
+                        aria-label="OTP"
+                        autofocus
+                        required
+                        maxlength="1"
+                    >
+
+                    <input 
+                        class="otp-input"
+                        type="number"
+                        id="otp4"
+                        name="otp4"
+                        aria-label="OTP"
+                        autofocus
+                        required
+                        maxlength="1"
+                    >
+                </fieldset>
+
+                <!-- Submit Button -->
+                    <button
+                        class="btn w-100"
+                        type="submit"
+                        id="verify-button"
+                    >
+                    <span>Create account</span>
+                    <!-- Optional loading spinner (hidden by default) -->
+                    <span class="loading-spinner hidden"></span>
+                </button>
+            </form>
+        </div>
+
+        <!-- TROUBLESHOOT LINKS -->
+        <div class="troubleshoot-container flex flex-col items-start gap-6">
+            <div class="trouble-shoot-group">
+                <p 
+                    class="flex flex-col items-start gap-2"
+                    >
+                    Can't find the email? 
+                    <div 
+                        class="wrapper flex flex-row items-center gap-2 group"
+                    >
+                        <a href="#"
+                            class="link">
+                            Resend email
+                        </a>
+
+                        <!-- HOVER ICON -->
+                        <img 
+                            src="/src/assets/icons/Right.svg"
+                            alt="Arrow icon"
+                            class="w-4 h-4
+                                group-hover:translate-x-1
+                                transition-all
+                                ease-in-out
+                                duration-100"
+                        >
+                    </div>
+                </p>
+            </div>
+
+            <div class="trouble-shoot-group">
+                <p 
+                    class="flex flex-col items-start gap-2"
+                    >
+                    Still can't find the email? 
+                    <div 
+                        class="wrapper flex flex-row items-center gap-2 group"
+                    >
+                        <a href="#"
+                            class="link">
+                            Send OTP to cell number
+                        </a>
+
+                        <!-- HOVER ICON -->
+                        <img 
+                            src="/src/assets/icons/Right.svg"
+                            alt="Arrow icon"
+                            class="w-4 h-4
+                                group-hover:translate-x-1
+                                transition-all
+                                ease-in-out
+                                duration-100"
+                        >
+                    </div>
+                </p>
+            </div>
+
+            <div class="trouble-shoot-group">
+                <p 
+                    class="flex flex-col items-start gap-2"
+                    >
+                    Or contact support via email
+                    <div 
+                        class="wrapper flex flex-row items-center gap-2 group"
+                    >
+                        <a href="mailto:support@lifttrack.com"
+                            class="link">
+                            support@lifttrack.com
+                        </a>
+
+                        <!-- HOVER ICON -->
+                        <img 
+                            src="/src/assets/icons/Right.svg"
+                            alt="Arrow icon"
+                            class="w-4 h-4
+                                group-hover:translate-x-1
+                                transition-all
+                                ease-in-out
+                                duration-100"
+                        >
+                    </div>
+                </p>
+            </div>
+        </div>
+
+        <!-- SKIP STEP FOR NOW -->
+        <a 
+            href="/pages/onboarding/developer-message.html"   
+            class="link
+                    flex flex-row items-center gap-2
+                    mt-6
+                    w-fit
+                    group"
+        >
+            Skip for now
+            <img
+                src="/src/assets/icons/Right.svg" 
+                alt="Arrow icon"
+                class="w-4 h-4
+                    group-hover:translate-x-1
+                    transition-all
+                    ease-in-out
+                    duration-100"
+            >
+        </a>
+    </main>
+
+</body>
+</html>

@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/styles/global.css">
+    <link rel="stylesheet" href="/styles/components/signup.css">
+
+    <!-- JS -->
+
+
+    <!-- Canonical Tag -->
+    <link rel="canonical" href="https://yourdomain.com" />
+
+    <!-- Open Graph Tags (for social media sharing) -->
+    <meta property="og:title" content="Weight Lifting Tracker | Track Your Progress, Nutrition, and Sleep" />
+    <meta property="og:description" content="Track your weight lifting progress, monitor your nutrition, and optimize your sleep with our comprehensive tracking site. Join now to achieve your fitness goals!" />
+    <meta property="og:image" content="https://yourdomain.com/image.jpg" />
+    <meta property="og:url" content="https://yourdomain.com" />
+    <meta property="og:type" content="website" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Weight Lifting Tracker | Track Your Progress, Nutrition, and Sleep" />
+    <meta name="twitter:description" content="Track your weight lifting progress, monitor your nutrition, and optimize your sleep with our comprehensive tracking site. Join now to achieve your fitness goals!" />
+    <meta name="twitter:image" content="https://yourdomain.com/image.jpg" />
+
+    <!-- Meta Robots -->
+    <meta name="robots" content="index, follow" />
+
+    <!-- Meta Keywords -->
+    <meta name="keywords" content="weight lifting tracker, fitness tracking, nutrition tracking, sleep tracker, progressive overload, fitness goals, muscle gain, food vendors, pre-made meals" />
+
+    <meta name="description" content="Track your weight lifting progress, monitor your nutrition, and optimize your sleep with our comprehensive tracking site. Join now to achieve your fitness goals!" />
+
+    <title>LiftTrack - Your Ultimate Workout Companion</title>
+</head>
+
+<body>
+    <!-- header content -->
+    <header class="w-screen h-auto px-3 py-6 shadow-md bg-white
+            fixed top-0 left-0 z-50">
+
+        <nav 
+            class="header-container flex flex-row items-center justify-between">
+            <h1 class="h1">Your goals</h1>
+
+            <!-- Skip link -->
+            <a 
+            href="#"
+            class="flex flex-row items-center gap-2 group">
+                Skip for now
+                <img 
+                    src="/src/assets/icons/Right.svg" 
+                    alt="Arrow icon"
+                    class="w-4 h-4 group-hover:translate-x-1 transition-all ease-in-out duration-100">
+            </a>
+        </nav>
+        
+        <!-- Progress Bar -->
+        <div class="progress-bar"></div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="mt-[118px] py-2 px-3">
+
+        <!-- Intro message -->
+        <h2 class="h2">
+            Thank you for providing all your details.
+            <br>
+            Now we need to set your goals.
+        </h2>
+
+        <!-- Change goals -->
+        <p class="text-sm mt-3">
+            As you grow and evolve in life, your goals naturally change too. That's why you can update your goals whenever you want – this platform is designed to adapt along with you on your journey!
+        </p>
+
+        <!-- Data collection form -->
+        <form 
+            id="data-collection-form"
+            class="wrapper mt-6 flex flex-col items-start gap-6" 
+            novalidate>
+
+            <!-- Weight goal -->
+            <fieldset class="w-full">
+                <!-- Weight goal input form group -->
+                <div class="input-group flex flex-col gap-3 relative">
+                    <legend class="sr-only">
+                        Do you have a target weight in mind?
+                    </legend>
+
+                    <!-- Group wrapper -->
+                    <div class="wrapper flex flex-col gap-3">
+                        <label
+                        class="label"
+                        for="target-weight">
+                            Do you have a target weight in mind?
+                        </label>
+
+                        <input
+                        class="input m-0"
+                        type="number"
+                        id="target-weight"
+                        name="target-weight"
+                        placeholder="Your target weight"
+                        required>
+                    </div>
+
+                    <!-- Weight values -->
+                    <div class="target-weight-values absolute right-3 top-[53px]">
+                        <select
+                            id="targetWeightUnit"
+                            name="targetWeightUnit">
+                            <option value="kg">kg</option>
+                            <option value="lbs">lbs</option>
+                        </select>
+                    </div>
+
+                    <!-- Error message -->
+                    <span class="error-message" data-error="targer-weight"></span>
+                </div>
+            </fieldset>
+
+            <!-- Goal timeline -->
+            <fieldset class="w-full">
+                <!-- Goal timeline input form group -->
+                <div class="input-group flex flex-col gap-3">
+                    <legend class="font-semibold">
+                        How quickly do you want to reach your goal?
+                    </legend>
+
+                    <!-- Group wrapper -->
+                    <div class="wrapper flex flex-col items-start justify-start gap-6">
+                        <!-- Goal timeline - 1-3 months -->
+                        <div class="wrapper flex flex-row items-center gap-3">                        
+                            <input
+                                class="radio"
+                                type="radio"
+                                id="goal-1-3"
+                                name="goal-timeline">
+                            <label
+                                class="label"
+                                for="goal-1-3"
+                            >1-3 months</label>
+                        </div>
+                    </div>
+
+                    <!-- Goal timeline - 3-6 months -->
+                    <div class="wrapper flex flex-row items-center gap-3">                        
+                        <input
+                            class="radio"
+                            type="radio"
+                            id="goal-3-6"
+                            name="goal-timeline">
+                        <label
+                            class="label"
+                            for="goal-3-6"
+                        >3-6 months</label>
+                    </div>
+
+                    <!-- Goal timeline - 6-12 months -->
+                    <div class="wrapper flex flex-row items-center gap-3">                        
+                        <input
+                            class="radio"
+                            type="radio"
+                            id="goal-6-12"
+                            name="goal-timeline">
+                        <label
+                            class="label"
+                            for="goal-6-12"
+                        >6-12 months</label>
+                    </div>
+
+                    <!-- Goal timeline - 1 year+ -->
+                    <div class="wrapper flex flex-row items-center gap-3">                        
+                        <input
+                            class="radio"
+                            type="radio"
+                            id="goal-1-year"
+                            name="goal-timeline">
+                        <label
+                            class="label"
+                            for="goal-1-year"
+                        >1-year +</label>
+                    </div>
+                </div>
+
+                    <!-- Error message -->
+                    <span class="error-message" data-error="goal-timeline"></span>
+                </div>
+            </fieldset>
+
+            <!-- Workout duration -->
+            <fieldset class="w-full">
+                <!-- Workout duration input form group -->
+                <div class="input-group flex flex-col gap-3">
+                    <legend class="font-semibold">
+                        How long do you prefer your workouts to be?
+                    </legend>
+
+                    <!-- Group wrapper -->
+                    <div class="wrapper flex flex-col items-start justify-start gap-6">
+                        <!-- Workout duration - 30-min -->
+                        <div class="wrapper flex flex-row items-center gap-3">                        
+                            <input
+                                class="radio"
+                                type="radio"
+                                id="duration-30-min"
+                                name="workout-duration">
+                            <label
+                                class="label"
+                                for="duration-30-min"
+                            >30 min or less</label>
+                        </div>
+                    </div>
+
+                    <!-- Workout duration - 30-60 min -->
+                    <div class="wrapper flex flex-row items-center gap-3">                        
+                        <input
+                            class="radio"
+                            type="radio"
+                            id="duration-30-60-min"
+                            name="workout-duration">
+                        <label
+                            class="label"
+                            for="duration-30-60-min"
+                        >30 - 60 min</label>
+                    </div>
+
+                    <!-- Workout duration - 60+ min -->
+                    <div class="wrapper flex flex-row items-center gap-3">                        
+                        <input
+                            class="radio"
+                            type="radio"
+                            id="duration-60-min"
+                            name="workout-duration">
+                        <label
+                            class="label"
+                            for="duration-60-min"
+                        >60+ min</label>
+                    </div>
+
+                    <!-- Error message -->
+                    <span class="error-message" data-error="workout-duration"></span>
+                </div>
+            </fieldset>
+
+            <!-- Training commitment -->
+            <fieldset class="w-full">
+                <!-- Training commitment input form group -->
+                <div class="input-group flex flex-col gap-3">
+                    <legend class="font-semibold">
+                        Which days can you commit to training?
+                    </legend>
+
+                    <!-- Group wrapper -->
+                    <div class="wrapper grid grid-cols-4 gap-6">
+                        <!-- Monday -->
+                        <div class="wrapper flex flex-row items-center gap-3">                        
+                            <input
+                                class="checkbox"
+                                type="checkbox"
+                                id="monday"
+                                name="traing-commitment">
+                            <label
+                                class="label"
+                                for="monday"
+                            >Mon</label>
+                        </div>
+
+                        <!-- Tuesday -->
+                        <div class="wrapper flex flex-row items-center gap-3">                        
+                            <input
+                                class="checkbox"
+                                type="checkbox"
+                                id="tuesday"
+                                name="traing-commitment">
+                            <label
+                                class="label"
+                                for="tuesday"
+                            >Tue</label>
+                        </div>
+
+                        <!-- Wednesday -->
+                        <div class="wrapper flex flex-row items-center gap-3">                        
+                            <input
+                                class="checkbox"
+                                type="checkbox"
+                                id="wednesday"
+                                name="traing-commitment">
+                            <label
+                                class="label"
+                                for="wednesday"
+                            >Wed</label>
+                        </div>
+
+                        <!-- Thursday -->
+                        <div class="wrapper flex flex-row items-center gap-3">                        
+                            <input
+                                class="checkbox"
+                                type="checkbox"
+                                id="thursday"
+                                name="traing-commitment">
+                            <label
+                                class="label"
+                                for="thursday"
+                            >Thu</label>
+                        </div>
+
+                        <!-- Friday -->
+                        <div class="wrapper flex flex-row items-center gap-3">                        
+                            <input
+                                class="checkbox"
+                                type="checkbox"
+                                id="friday"
+                                name="traing-commitment">
+                            <label
+                                class="label"
+                                for="friday"
+                            >Fri</label>
+                        </div>
+
+                        <!-- Saturday -->
+                        <div class="wrapper flex flex-row items-center gap-3">                        
+                            <input
+                                class="checkbox"
+                                type="checkbox"
+                                id="saturday"
+                                name="traing-commitment">
+                            <label
+                                class="label"
+                                for="saturday"
+                            >Sat</label>
+                        </div>
+
+                        <!-- Sunday -->
+                        <div class="wrapper flex flex-row items-center gap-3">                        
+                            <input
+                                class="checkbox"
+                                type="checkbox"
+                                id="sunday"
+                                name="traing-commitment">
+                            <label
+                                class="label"
+                                for="sunday"
+                            >Sun</label>
+                        </div>                    
+                </div>
+                <!-- Error message -->
+                <span class="error-message" data-error="traing-commitment"></span>
+            </fieldset>
+
+             <!-- Cardio inclusion -->
+             <fieldset class="w-full">
+                <!-- Cardio inclusion input form group -->
+                <div class="input-group flex flex-col gap-3">
+                    <legend class="font-semibold">
+                        Are you interested in including cardio in your routine?
+                    </legend>
+
+                    <!-- Group wrapper -->
+                    <div class="wrapper flex flex-col items-start justify-start gap-6">
+                        <!-- Cardio inclusio - Yes -->
+                        <div class="wrapper flex flex-row items-center gap-3">                        
+                            <input
+                                class="radio"
+                                type="radio"
+                                id="cardio-yes"
+                                name="cardio-inclusion">
+                            <label
+                                class="label"
+                                for="cardio-yes"
+                            >Yes</label>
+                        </div>
+                    </div>
+
+                    <!-- Cardio inclusio - No -->
+                    <div class="wrapper flex flex-row items-center gap-3">                        
+                        <input
+                            class="radio"
+                            type="radio"
+                            id="cardio-no"
+                            name="cardio-inclusion">
+                        <label
+                            class="label"
+                            for="cardio-no"
+                        >No</label>
+                    </div>
+
+                    <!-- Error message -->
+                    <span class="error-message" data-error="cardio-inclusion"></span>
+                </div>
+            </fieldset>
+
+            <!-- Submit Button -->
+            <button
+                class="btn"
+                type="submit"
+                id="next-button"
+            >
+                <span>Next</span>
+                <!-- Optional loading spinner (hidden by default) -->
+                <span class="loading-spinner hidden"></span>
+            </button>
+        </form> 
+            
+    </main>
+</body>
+</html>

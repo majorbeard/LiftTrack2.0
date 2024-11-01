@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="/js/dash.js" async defer></script>
+    <link rel="stylesheet" href="/css/global.css">
+</head>
+
+<body>
+    <!-- HEADER | LOGO | NAV -->
+    <!-- NAV | PROFILE -->
+    <header class="w-screen h-auto px-2 py-5 relative shadow-md">
+        <nav class="w-full h-auto flex flex-row justify-between items-center">
+
+            <!-- HAMBURGER BUTTON | ICON -->
+            <button id="hamburger" class="w-9 h-6 flex flex-col justify-between items-center">
+                <div id="hamburger-line-1" style="background-color: var(--main-color);" class="hamburger-line w-full h-1 rounded-full"></div>
+                <div id="hamburger-line-2" style="background-color: var(--main-color);" class="hamburger-line w-full h-1 rounded-full"></div>
+                <div id="hamburger-line-3" style="background-color: var(--main-color);" class="hamburger-line w-full h-1 rounded-full"></div>
+            </button>
+
+            <!-- PROFILE BUTTON | ICON -->
+            <div id="profile-menu" class="w-10 h-10 p-1 rounded-full bg-[#282828] hover:cursor-pointer">
+                <img src="/images/icons/profile.svg" alt="profile" class="w-full h-full">
+            </div>
+
+            <!-- NAVBAR MENU -->
+            <ul id="navbar" style="background-color: var(--secondary-color);" class="fixed top-0 left-0 w-1/2 h-screen p-2 origin-left scale-x-0 transition-all duration-200 ease-in-out">
+                <li><a href="#" class="">Home</a></li>
+                <li><a href="#" class="">About</a></li>
+                <li><a href="#" class="">Contact</a></li>
+
+                <!-- CLOSE MENU BUTTON -->
+                <li>
+                    <button id="close-nav-menu" class="text-5xl absolute top-0 right-2">
+                        &times;
+                    </button>
+                </li>
+            </ul>
+
+            <!-- PROFILE MENU -->
+            <ul id="profile" style="background-color: var(--secondary-color);" class="fixed top-0 right-0 w-1/2 h-screen p-2 text-right origin-right scale-x-0 transition-all duration-200 ease-in-out">
+                <li><a href="#" class="">Profile menu 1</a></li>
+                <li><a href="#" class="">Profile menu 2</a></li>
+                <li><a href="#" class="">Profile menu 2</a></li>
+
+                <!-- CLOSE MENU BUTTON -->
+                <li>
+                    <button id="close-profile-menu" class="text-5xl absolute top-0 left-2">
+                        &times;
+                    </button>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- MAIN | DASHBOARD | QUICK ACTIONS | CONTENT -->
+    <main id="main" class="w-screen h-auto">
+
+        <!-- USER INTRO -->
+        <section aria-label="User greeting" id="intro" class="w-screen h-auto p-2">
+            <p class="heading">Hello, <span id="userName"></span>.</p>
+            <p class="subheading"><span id="userMessage"></span></p>
+        </section>
+
+        <div class="schdule-text pt-2 px-2">
+            <p class="subheading">Your weekly schedule</p>
+        </div>
+        <!-- WEEKLY CALENDAR -->
+        <section aria-label="Calendar" id="dashboard-calendar" class="w-screen h-auto px-2 py-3 mb-2 flex flex-row items-center gap-2 overflow-x-scroll">
+            <!-- CALENDAR DAY -->
+            <div class="calendar-day h-auto w-auto px-3 py-2 flex flex-col items-center ">
+
+                <!-- IN/COMPLETED WORKOUT MARKER -->
+                <div class="completed-workout-marker"></div>
+
+                <!-- CALENDAR DATE -->
+                <p id="day" class="text-base">SUN</p>
+                <p id="date" class="text-3xl">14</p>
+
+                <!-- INACTIVE WORKOUT MARKER -->
+                <div class="inactive-workout-marker"></div>
+
+                <!-- WORKOUT ICON -->
+                <img id="workout-icon" src="/images/icons/bench_press.svg" alt="sleep" class="w-10 h-auto">
+            </div>
+
+            <!-- CALENDAR DAY -->
+            <div class="calendar-day h-auto w-auto px-3 py-2 flex flex-col items-center">
+
+                <!-- IN/COMPLETED WORKOUT MARKER -->
+                <div class="completed-workout-marker"></div>
+
+                <!-- CALENDAR DATE -->
+                <p id="day" class="text-base">MON</p>
+                <p id="date" class="text-3xl">15</p>
+
+                <!-- INACTIVE WORKOUT MARKER -->
+                <div class="inactive-workout-marker"></div>
+
+                <!-- WORKOUT ICON -->
+                <img id="workout-icon" src="/images/icons/bench_press.svg" alt="sleep" class="w-10 h-auto">
+            </div>
+
+            <!-- CALENDAR DAY -->
+            <div class="calendar-day h-auto w-auto px-3 py-2 flex flex-col items-center">
+
+                <!-- IN/COMPLETED WORKOUT MARKER -->
+                <div class="completed-workout-marker"></div>
+
+                <!-- CALENDAR DATE -->
+                <p id="day" class="text-base">TUE</p>
+                <p id="date" class="text-3xl">16</p>
+
+                <!-- IN/ACTIVE WORKOUT MARKER -->
+                <div class="inactive-workout-marker"></div>
+
+                <!-- WORKOUT ICON -->
+                <img id="workout-icon" src="/images/icons/bench_press.svg" alt="sleep" class="w-10 h-auto">
+            </div>
+
+            <!-- CALENDAR DAY -->
+            <!-- ACTIVE -->
+            <div class="calendar-day active-calendar-day h-auto w-auto px-3 py-2 flex flex-col items-center">
+
+                <!-- IN/COMPLETED WORKOUT MARKER -->
+                <div class="incompleted-workout-marker"></div>
+            
+                <!-- CALENDAR DATE -->
+                <p id="day" class="text-base">WED</p>
+                <p id="date" class="text-3xl">17</p>
+            
+                <!-- IN/ACTIVE WORKOUT MARKER -->
+                <div class="active-workout-marker"></div>
+            
+                <!-- WORKOUT ICON -->
+                <img id="workout-icon" src="/images/icons/bench_press.svg" alt="sleep" class="w-10 h-auto">
+            </div>
+
+            <!-- CALENDAR DAY -->
+            <div class="calendar-day h-auto w-auto px-3 py-2 flex flex-col items-center">
+
+                <!-- IN/COMPLETED WORKOUT MARKER -->
+                <div class="incompleted-workout-marker"></div>
+
+                <!-- CALENDAR DATE -->
+                <p id="day" class="text-base">THU</p>
+                <p id="date" class="text-3xl">18</p>
+
+                <!-- IN/ACTIVE WORKOUT MARKER -->
+                <div class="inactive-workout-marker"></div>
+
+                <!-- WORKOUT ICON -->
+                <img id="workout-icon" src="/images/icons/bench_press.svg" alt="sleep" class="w-10 h-auto">
+            </div>
+
+            <!-- CALENDAR DAY -->
+            <div class="calendar-day h-auto w-auto px-3 py-2 flex flex-col items-center">
+
+                <!-- IN/COMPLETED WORKOUT MARKER -->
+                <div class="incompleted-workout-marker"></div>
+
+                <!-- CALENDAR DATE -->
+                <p id="day" class="text-base">FRI</p>
+                <p id="date" class="text-3xl">19</p>
+
+                <!-- IN/ACTIVE WORKOUT MARKER -->
+                <div class="inactive-workout-marker"></div>
+
+                <!-- WORKOUT ICON -->
+                <img id="workout-icon" src="/images/icons/bench_press.svg" alt="sleep" class="w-10 h-auto">
+            </div>
+
+            <!-- CALENDAR DAY -->
+            <div class="calendar-day h-auto w-auto px-3 py-2 flex flex-col items-center">
+
+                <!-- IN/COMPLETED WORKOUT MARKER -->
+                <div class="incompleted-workout-marker"></div>
+
+                <!-- CALENDAR DATE -->
+                <p id="day" class="text-base">SAT</p>
+                <p id="date" class="text-3xl">20</p>
+
+                <!-- IN/ACTIVE WORKOUT MARKER -->
+                <div class="inactive-workout-marker"></div>
+
+                <!-- WORKOUT ICON -->
+                <img id="workout-icon" src="/images/icons/bench_press.svg" alt="sleep" class="w-10 h-auto">
+            </div>
+
+            <!-- CALENDAR DAY -->
+            <div class="calendar-day h-auto w-auto px-3 py-2 flex flex-col items-center">
+
+                <!-- IN/COMPLETED WORKOUT MARKER -->
+                <div class="incompleted-workout-marker"></div>
+
+                <!-- CALENDAR DATE -->
+                <p id="day" class="text-base">SUN</p>
+                <p id="date" class="text-3xl">21</p>
+
+                <!-- IN/ACTIVE WORKOUT MARKER -->
+                <div class="inactive-workout-marker"></div>
+
+                <!-- WORKOUT ICON -->
+                <img id="workout-icon" src="/images/icons/bench_press.svg" alt="sleep" class="w-10 h-auto">
+            </div>
+        </section>
+
+        <!-- DASHBOARD | QUICK ACTIONS | TRACKING CONTENT -->
+        <section aria-label="Dashboard" id="dashboard-quick-actions" class="p-2 grid grid-cols-2 gap-2 mb-[56px]">
+
+            <!-- WORKOUT INTRO -->
+            <h1 class="heading col-span-2">Today's workout</h1>
+
+            <!-- DAILY WORKOUT -->
+            <div class="dashboard-card col-span-2">
+
+                <!-- CARD HEADER -->
+                <div class="wrapper flex flex-row items-baseline justify-between mb-3">
+                    <h2 class="heading">Push</h2>
+                    <p>Last exercised on <span id="last-exercised">13/06/2024</span></p>
+                </div>
+
+                <!-- CARD CONTENT -->
+                <div class="wrapper flex flex-row items-center gap-2">
+                    <button class="dashboard-btn w-full">See full workout</button>
+                    <button class="dashboard-btn w-full">Start workout</button>
+                </div>
+            </div>
+
+            <!-- QUICK ACTIONS -->
+            <div class="dashboard-card col-span-2">
+
+                <!-- CARD HEADER -->
+                <h2 class="heading">Quick actions</h2>
+
+                <!-- CARD CONTENT -->
+                <div class="wrapper flex flex-row items-center gap-2 overflow-x-scroll">
+                    <!-- QUICK ACTION BUTTONS -->
+                    <button class="dashboard-btn">Log meals</button>
+                    <button class="dashboard-btn">Log weight</button>
+                    <button class="dashboard-btn">Log sleep</button>
+                    <button class="dashboard-btn">Log workout</button>
+                </div>
+            </div>
+
+            <!-- TRACKING -->
+            <!-- TRACKING CARD 1 -->
+            <div class="dashboard-card col-span-1 max-h-[190px]">
+                <!-- CARD CONTENT -->
+
+                <!-- CARD HEADER -->
+                <h2 class="subheading font-semibold">Training schedule</h2>
+                <a href="#" class="subheading">Full schedule</a>
+
+                <!-- CARD CALENDAR -->
+                <div class="wrapper flex flex-row items-center gap-2 overflow-x-scroll">
+                    <!-- CALENDAR DAY -->
+                    <div class="calendar-day h-auto w-auto px-3 py-2 flex flex-col items-center bg-white">
+
+                        <!-- CALENDAR DATE -->
+                        <p id="day" class="text-base">WED</p>
+                        <p id="date" class="text-3xl">17</p>
+
+                        <!-- IN/ACTIVE WORKOUT MARKER -->
+                        <div class="active-workout-marker"></div>
+
+                        <!-- WORKOUT ICON -->
+                        <img id="workout-icon" src="/images/icons/bench_press.svg" alt="sleep" class="w-10 h-auto">
+                    </div>
+
+                    <!-- CALENDAR DAY -->
+                    <div class="calendar-day h-auto w-auto px-3 py-2 flex flex-col items-center">
+
+                        <!-- CALENDAR DATE -->
+                        <p id="day" class="text-base">THU</p>
+                        <p id="date" class="text-3xl">18</p>
+
+                        <!-- IN/ACTIVE WORKOUT MARKER -->
+                        <div class="inactive-workout-marker"></div>
+
+                        <!-- WORKOUT ICON -->
+                        <img id="workout-icon" src="/images/icons/bench_press.svg" alt="sleep" class="w-10 h-auto">
+                    </div>
+
+                    <!-- CALENDAR DAY -->
+                    <div class="calendar-day h-auto w-auto px-3 py-2 flex flex-col items-center">
+
+                        <!-- CALENDAR DATE -->
+                        <p id="day" class="text-base">FRI</p>
+                        <p id="date" class="text-3xl">19</p>
+
+                        <!-- IN/ACTIVE WORKOUT MARKER -->
+                        <div class="inactive-workout-marker"></div>
+
+                        <!-- WORKOUT ICON -->
+                        <img id="workout-icon" src="/images/icons/bench_press.svg" alt="sleep" class="w-10 h-auto">
+                    </div>
+
+                    <!-- CALENDAR DAY -->
+                    <div class="calendar-day h-auto w-auto px-3 py-2 flex flex-col items-center">
+
+                        <!-- CALENDAR DATE -->
+                        <p id="day" class="text-base">SAT</p>
+                        <p id="date" class="text-3xl">20</p>
+
+                        <!-- IN/ACTIVE WORKOUT MARKER -->
+                        <div class="inactive-workout-marker"></div>
+
+                        <!-- WORKOUT ICON -->
+                        <img id="workout-icon" src="/images/icons/bench_press.svg" alt="sleep" class="w-10 h-auto">
+                    </div>
+
+                    <!-- CALENDAR DAY -->
+                    <div class="calendar-day h-auto w-auto px-3 py-2 flex flex-col items-center">
+
+                        <!-- CALENDAR DATE -->
+                        <p id="day" class="text-base">SUN</p>
+                        <p id="date" class="text-3xl">21</p>
+
+                        <!-- IN/ACTIVE WORKOUT MARKER -->
+                        <div class="inactive-workout-marker"></div>
+
+                        <!-- WORKOUT ICON -->
+                        <img id="workout-icon" src="/images/icons/bench_press.svg" alt="sleep" class="w-10 h-auto">
+                    </div>
+                </div>
+            </div>
+
+            <!-- TRACKING CARD 2 -->
+            <div class="dashboard-card col-span-1 max-h-[190px]">
+                <!-- CARD CONTENT -->
+
+                <!-- CARD HEADER -->
+                <h2 class="subheading font-semibold">Your goals</h2>
+                <div class="wrapper flex flex-col items-start gap-2 overflow-y-scroll max-h-[145px]">
+
+                    <!-- GOALS CONTENT -->
+                    <div class="wrapper mb-2">
+                        <h3 class="subheading">Weight goal</h3>
+                        <div class="wrapper flex flex-row items-center justify-start gap-3">
+                            <div style="border-color: var(--main-color);" class="goal-tracking-icon border-4 w-5 h-5 rounded-full"></div>
+                            <p>3.5kg to go</p>
+                        </div>                        
+                    </div>
+                    
+                    <!-- GOALS CONTENT -->
+                    <div class="wrapper mb-2">
+                        <h3 class="subheading">Nutrition goal</h3>
+                        <div class="wrapper flex flex-row items-center justify-start gap-3">
+                            <div style="border-color: var(--main-color);" class="goal-tracking-icon border-4 w-5 h-5 rounded-full"></div>
+                            <p>300cal to go</p>
+                        </div>                        
+                    </div>
+
+                    <!-- GOALS CONTENT -->
+                    <div class="wrapper mb-2">
+                        <h3 class="subheading">Sleep log</h3>
+                        <div class="wrapper flex flex-row items-center justify-start gap-3">
+                            <p>You slept for 7.2 hours last night</p>
+                        </div>                        
+                    </div>
+                </div>                    
+            </div>
+
+            <!-- TRACKING CARD 3 -->
+            <!-- PROGRESS SUMMARY -->
+            <div class="progress-card col-span-2 h-auto">
+                <h2 class="heading mt-4 mb-2">Your progress summary</h2>
+                <div class="dashboard-card">
+
+                    <!-- CARD HEADER -->
+                    <h3 class="subheading">Workouts completed</h3>
+                    <div class="wrapper flex flex-row items-center justify-start gap-3">
+                        <div style="border-color: var(--main-color);" class="goal-tracking-icon border-4 w-5 h-5 rounded-full"></div>
+                        <p>43% completed</p>
+                    </div>
+
+                    <!-- CARD SUBHEADER -->
+                    <div class="wrapper flex flex-row items-baseline justify-between mt-3">
+                        <h4 class="heading">Weekly analysis</h4>
+                        <a href="#" class="text-base">Change view</a>
+                    </div>
+                    <!-- ANALYSIS -->
+                    <p>Hours slept vs training time</p>
+
+                    <!-- COMPARISON ANALYSIS CHART -->
+                    <div class="wrapper flex flex-row items-center justify-center gap-2 mt-3 mb-2">
+
+                        <div class="wrapper w-full h-auto">
+                            <h4 class="font-semibold">Hours slept</h4>
+                            <!-- SLEEP CHART -->
+                            <div class="chart-1 w-full h-48 rounded-md bg-slate-800"></div>
+                        </div>
+
+                        <!-- TRAINING CHART -->
+                        <div class="wrapper w-full h-auto">
+                            <h4 class="font-semibold">Training time</h4>
+                            <!-- TRAINING CHART -->
+                            <div class="chart-2 w-full h-48 rounded-md bg-slate-800"></div>
+                        </div>
+                    </div>
+                    <!-- ANALYSIS -->
+                    <p >Your performance improves by 10% when you sleep more than 7 hours</p>
+
+                    <!-- ALL STATS -->
+                    <button class="dashboard-btn w-full mt-2">See all stats</button>
+                </div>
+            </div>
+
+            <!-- TIP OF THE DAY (ARTICLE) -->
+            <div class="dashboard-card col-span-2">
+                <h2 class="heading">Tip of the day</h2>
+                <p class="text-base">Hydration is the key! Drinking fluids in general will help you keep healthy. A hydrated body delivers more energy, improved stamina and alertness.</p>
+                <button class="dashboard-btn w-full mt-2">Read full article</button>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="relative">
+        <div class="dashboard-card mx-2 fixed bottom-2 left-0 right-0 z-10">
+            <nav id="footer-nav" class="w-full h-auto">
+
+                <!-- FOOTER ICONS -->
+                <ul class="flex flex-row justify-between items-center">
+                    <li><a href="#"><img src="/images/icons/home.svg" alt="home" class="h-8 w-auto"></a></li>
+                    <li><a href="#"><img src="/images/icons/workout.svg" alt="workout" class="h-8 w-auto"></a></li>
+                    <li><a href="#"><img src="/images/icons/nutrition.svg" alt="nutrition" class="h-8 w-auto"></a></li>
+                    <li><a href="#"><img src="/images/icons/training.svg" alt="training" class="h-8 w-auto"></a></li>
+                    <li><a href="#"><img src="/images/icons/about.svg" alt="about" class="h-8 w-auto"></a></li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+</body>
+</html>

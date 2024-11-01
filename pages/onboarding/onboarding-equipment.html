@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/styles/global.css">
+    <link rel="stylesheet" href="/styles/components/signup.css">
+
+    <!-- JS -->
+
+
+    <!-- Canonical Tag -->
+    <link rel="canonical" href="https://yourdomain.com" />
+
+    <!-- Open Graph Tags (for social media sharing) -->
+    <meta property="og:title" content="Weight Lifting Tracker | Track Your Progress, Nutrition, and Sleep" />
+    <meta property="og:description" content="Track your weight lifting progress, monitor your nutrition, and optimize your sleep with our comprehensive tracking site. Join now to achieve your fitness goals!" />
+    <meta property="og:image" content="https://yourdomain.com/image.jpg" />
+    <meta property="og:url" content="https://yourdomain.com" />
+    <meta property="og:type" content="website" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Weight Lifting Tracker | Track Your Progress, Nutrition, and Sleep" />
+    <meta name="twitter:description" content="Track your weight lifting progress, monitor your nutrition, and optimize your sleep with our comprehensive tracking site. Join now to achieve your fitness goals!" />
+    <meta name="twitter:image" content="https://yourdomain.com/image.jpg" />
+
+    <!-- Meta Robots -->
+    <meta name="robots" content="index, follow" />
+
+    <!-- Meta Keywords -->
+    <meta name="keywords" content="weight lifting tracker, fitness tracking, nutrition tracking, sleep tracker, progressive overload, fitness goals, muscle gain, food vendors, pre-made meals" />
+
+    <meta name="description" content="Track your weight lifting progress, monitor your nutrition, and optimize your sleep with our comprehensive tracking site. Join now to achieve your fitness goals!" />
+
+    <title>LiftTrack - Your Ultimate Workout Companion</title>
+</head>
+
+<body>
+    <!-- header content -->
+    <header class="w-screen h-auto px-3 py-6 shadow-md bg-white
+            fixed top-0 left-0 z-50">
+
+        <nav 
+            class="header-container flex flex-row items-center justify-between">
+            <h1 class="h1">Your stats</h1>
+
+            <!-- Skip link -->
+            <a 
+            href="/pages/onboarding/onboarding-goals.html"
+            class="flex flex-row items-center gap-2 group">
+                Skip for now
+                <img 
+                    src="/src/assets/icons/Right.svg" 
+                    alt="Arrow icon"
+                    class="w-4 h-4 group-hover:translate-x-1 transition-all ease-in-out duration-100">
+            </a>
+        </nav>
+        
+        <!-- Progress Bar -->
+        <div class="progress-bar"></div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="mt-[94px] py-2 px-3">
+
+        <!-- Data collection form -->
+        <form 
+            id="data-collection-form"
+            class="wrapper mt-6 flex flex-col items-start gap-6" 
+            novalidate>
+
+            <!-- Equipement -->
+            <fieldset class="w-full">
+                <!-- Equipement input form group -->
+                <div class="input-group flex flex-col gap-3">
+                    <legend class="font-semibold">
+                        What kind of equipement do you have access to?
+                    </legend>
+
+                    <!-- Group wrapper -->
+                    <div class="wrapper flex flex-col items-start justify-start gap-6">
+                        <!-- Home gym -->
+                        <div class="wrapper flex flex-row items-center gap-3">                        
+                            <input
+                                class="checkbox"
+                                type="checkbox"
+                                id="home-gym"
+                                name="equipment">
+                            <label
+                                class="label"
+                                for="home-gym"
+                            >Home gym</label>
+                        </div>
+
+                        <!-- Commercial gym -->
+                        <div class="wrapper flex flex-row items-center gap-3">                        
+                            <input
+                                class="checkbox"
+                                type="checkbox"
+                                id="commercial-gym"
+                                name="equipment">
+                            <label
+                                class="label"
+                                for="commercial-gym"
+                            >Commercial gym</label>
+                        </div>
+
+                        <!-- Minimal -->
+                        <div class="wrapper flex flex-row items-center gap-3">                        
+                            <input
+                                class="checkbox"
+                                type="checkbox"
+                                id="minimal-equipment"
+                                name="equipment">
+                            <label
+                                class="label"
+                                for="minimal-equipment"
+                            >Minimal equipement</label>
+                        </div>
+                    </div>
+
+                    <!-- Error message -->
+                    <span class="error-message" data-error="equipement"></span>
+                </div>
+            </fieldset>
+
+            <!-- Injuries -->
+            <fieldset class="w-full">
+                <!-- Injuries input form group -->
+                <div class="input-group flex flex-col gap-3">
+                    <legend class="font-semibold">
+                        Do you have any injuries or physcical limitations we should know about?
+                    </legend>
+
+                    <!-- Group wrapper -->
+                    <div class="wrapper flex flex-col items-start justify-start gap-6">
+                        <!-- Injuries - Yes -->
+                        <div class="wrapper flex flex-row items-center gap-3">                        
+                            <input
+                                class="radio"
+                                type="radio"
+                                id="injuries-no"
+                                name="injuries">
+                            <label
+                                class="label"
+                                for="injuries-no"
+                            >No</label>
+                        </div>
+
+                        <!-- Injuries - No -->
+                        <div class="wrapper flex flex-row items-center gap-3">                        
+                            <input
+                                class="radio"
+                                type="radio"
+                                id="injuries-yes"
+                                name="injuries">
+                            <label
+                                class="label"
+                                for="injuries-yes"
+                            >Yes</label>
+                        </div>
+
+                        <!-- Injuries - Textarea -->
+                        <textarea
+                            id="injuries-textarea"
+                            class="text-area hidden"
+                            placeholder="If yes, please tell us more."
+                            name="injuries-textarea">
+                        </textarea>
+                    </div>
+
+                    <!-- Error message -->
+                    <span class="error-message" data-error="injuries"></span>
+                </div>
+            </fieldset>
+
+            <!-- Medical -->
+            <fieldset class="w-full">
+                <!-- Medicals input form group -->
+                <div class="input-group flex flex-col gap-3">
+                    <legend class="font-semibold">
+                        Do you have any medical conditions relevant to weight training?
+                    </legend>
+
+                    <!-- Group wrapper -->
+                    <div class="wrapper flex flex-col items-start justify-start gap-6">
+                        <!-- Medical - Yes -->
+                        <div class="wrapper flex flex-row items-center gap-3">                        
+                            <input
+                                class="radio"
+                                type="radio"
+                                id="medical-no"
+                                name="medical">
+                            <label
+                                class="label"
+                                for="medical-no"
+                            >No</label>
+                        </div>
+
+                        <!-- Medical - No -->
+                        <div class="wrapper flex flex-row items-center gap-3">                        
+                            <input
+                                class="radio"
+                                type="radio"
+                                id="medical-yes"
+                                name="medical">
+                            <label
+                                class="label"
+                                for="medical-yes"
+                            >Yes</label>
+                        </div>
+
+                        <!-- Medical - Textarea -->
+                        <textarea
+                            id="medical-textarea"
+                            class="text-area hidden"
+                            placeholder="If yes, please tell us more."
+                            name="medical-textarea">
+                        </textarea>
+                    </div>
+
+                    <!-- Error message -->
+                    <span class="error-message" data-error="medical"></span>
+                </div>
+            </fieldset>
+
+            <!-- Goal -->
+            <fieldset class="w-full">
+                <!-- Goal input form group -->
+                <div class="input-group flex flex-col gap-3">
+                    <legend class="font-semibold">
+                        What is your primary fitness goal?
+                    </legend>
+
+                    <!-- Group wrapper -->
+                    <div class="wrapper flex flex-col items-start justify-start gap-6">
+                        <!-- Fat loss -->
+                        <div class="wrapper flex flex-row items-center gap-3">                        
+                            <input
+                                class="checkbox"
+                                type="checkbox"
+                                id="fat-loss"
+                                name="goal">
+                            <label
+                                class="label"
+                                for="fat-loss"
+                            >Fat loss</label>
+                        </div>
+
+                        <!-- Muscle gain -->
+                        <div class="wrapper flex flex-row items-center gap-3">                        
+                            <input
+                                class="checkbox"
+                                type="checkbox"
+                                id="muscle-gain"
+                                name="goal">
+                            <label
+                                class="label"
+                                for="muscle-gain"
+                            >Muscle gain</label>
+                        </div>
+
+                        <!-- Strength -->
+                        <div class="wrapper flex flex-row items-center gap-3">                        
+                            <input
+                                class="checkbox"
+                                type="checkbox"
+                                id="strength"
+                                name="goal">
+                            <label
+                                class="label"
+                                for="strength"
+                            >Strength Increase</label>
+                        </div>
+
+                        <!-- Fitness -->
+                        <div class="wrapper flex flex-row items-center gap-3">                        
+                            <input
+                                class="checkbox"
+                                type="checkbox"
+                                id="fitness"
+                                name="goal">
+                            <label
+                                class="label"
+                                for="fitness"
+                            >Overall fitness</label>
+                        </div>
+                    </div>
+
+                    <!-- Error message -->
+                    <span class="error-message" data-error="goal"></span>
+                </div>
+            </fieldset>
+
+            <!-- Submit Button -->
+            <button
+                class="btn"
+                type="submit"
+                id="next-button"
+            >
+                <span>Next</span>
+                <!-- Optional loading spinner (hidden by default) -->
+                <span class="loading-spinner hidden"></span>
+            </button>
+        </form> 
+            
+    </main>
+</body>
+</html>
