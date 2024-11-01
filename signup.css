@@ -1,0 +1,21 @@
+/* SECTIONS */
+#social-login-section {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+}
+
+#sign-up-section {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+}
+
+/* EYE ICON */
+.eye-icon {
+    transition: var(--transition);
+}
+
+.eye-icon:hover,
+.eye-icon:focus,
+.eye-icon:active {
+    transform: scale(var(--scale-small));
+}
